@@ -1,0 +1,26 @@
+{
+  "name": "britel-pruebas-e2e",
+  "version": "1.0.0",
+  "description": "Pruebas E2E automatizadas para Britel",
+  "scripts": {
+    "clean": "npx ts-node scripts/limpiar-datos.ts",
+    "test": "npm run clean && npx playwright test --project=01-login --project=02-flujo-e2e --project=03-validaciones --project=03-roles --project=04-edicion --project=05-login-cliente --project=07-promesas-pago",
+    "test:visual": "npm run clean && npx playwright test --project=visual-login --project=visual-e2e --project=visual-validaciones --project=visual-roles --project=visual-edicion --project=visual-login-cliente --project=visual-promesas-pago",
+    "test:basico": "npm run clean && npx playwright test --project=01-login --project=02-flujo-e2e --project=03-validaciones",
+    "test:roles": "npx playwright test --project=03-roles",
+    "test:edicion": "npx playwright test --project=04-edicion",
+    "test:login-cliente": "npx playwright test --project=05-login-cliente",
+    "test:promesas": "npx playwright test --project=07-promesas-pago",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npm run clean && npx playwright test --debug",
+    "report": "npx playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/mssql": "^9.1.0",
+    "@types/node": "^20.10.0",
+    "mssql": "^10.0.0",
+    "ts-node": "^10.9.0",
+    "typescript": "^5.0.0"
+  }
+}
