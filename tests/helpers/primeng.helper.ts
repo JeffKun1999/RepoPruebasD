@@ -51,13 +51,17 @@ export async function fillInputNumberById(page: Page, id: string, value: number)
   await page.waitForTimeout(100);
 }
 
-// Toggle checkbox
+// Toggle checkbox (p-checkbox)
 export async function toggleCheckbox(page: Page, formControlName: string, checked: boolean): Promise<void> {
   const checkbox = page.locator(`p-checkbox[formcontrolname="${formControlName}"]`);
-  const isChecked = await checkbox.locator('.p-checkbox-checked').count() > 0;
+
+  // Verificar estado actual - probar multiples selectores para diferentes versiones de PrimeNG
+  const checkboxInput = checkbox.locator('input[type="checkbox"]');
+  const isChecked = await checkboxInput.isChecked();
 
   if (isChecked !== checked) {
     await checkbox.click();
+    await page.waitForTimeout(100);
   }
 }
 

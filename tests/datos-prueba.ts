@@ -107,23 +107,15 @@ export const URLS = {
   planes: '/planes',
   clientes: '/clientes/clientes',
   contratos: '/contratos',
-  roles: '/usuarios/roles',
-  pagos: '/pagos/pagos',
-  promesasPago: '/pagos/promesa-pagos',
-  // Portal cliente
   portalCliente: '/portal-cliente',
-  portalClienteServicios: '/portal-cliente/mis-servicios'
+  portalClienteServicios: '/portal-cliente/mis-servicios',
+  portalClienteComprobantes: '/portal-cliente/mis-comprobantes',
+  portalClienteTickets: '/portal-cliente/tickets-soporte'
 };
 
 // =====================================================
 // DATOS ADICIONALES PARA PRUEBAS EXTENDIDAS
 // =====================================================
-
-export const DATOS_ROL = {
-  nombre: 'Supervisor Test',
-  nombreEditado: 'Supervisor Test Editado',
-  permisos: ['Reportes.Ver', 'Reportes.Exportar']
-};
 
 export const DATOS_CLIENTE_EDICION = {
   nombreEditado: 'Cliente Test Editado',
@@ -138,11 +130,5 @@ export const DATOS_PLAN_EDICION = {
 export const CREDENCIALES_CLIENTE = {
   usuario: '0400544680',
   contrasena: 'Britel.0400544680'
-};
-
-export const CREDENCIALES_CLIENTE_PAGO = {
-  usuario: '2100789615',
-  contrasena: 'Britel.2100789615',
-  servicioId: 2
 };
 

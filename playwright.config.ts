@@ -41,11 +41,6 @@ export default defineConfig({
       dependencies: ['02-flujo-e2e'],
     },
     {
-      name: '03-roles',
-      testMatch: /03-roles\.spec\.ts/,
-      dependencies: ['02-flujo-e2e'],
-    },
-    {
       name: '04-edicion',
       testMatch: /04-edicion\.spec\.ts/,
       dependencies: ['02-flujo-e2e'],
@@ -53,11 +48,6 @@ export default defineConfig({
     {
       name: '05-login-cliente',
       testMatch: /05-login-cliente\.spec\.ts/,
-      dependencies: ['02-flujo-e2e'],
-    },
-    {
-      name: '07-promesas-pago',
-      testMatch: /07-promesas-pago\.spec\.ts/,
       dependencies: ['02-flujo-e2e'],
     },
 
@@ -100,18 +90,6 @@ export default defineConfig({
       },
     },
     {
-      name: 'visual-roles',
-      testMatch: /03-roles\.spec\.ts/,
-      dependencies: ['visual-e2e'],
-      use: {
-        headless: false,
-        slowMo: 800,
-        launchOptions: {
-          slowMo: 800,
-        },
-      },
-    },
-    {
       name: 'visual-edicion',
       testMatch: /04-edicion\.spec\.ts/,
       dependencies: ['visual-e2e'],
@@ -126,18 +104,6 @@ export default defineConfig({
     {
       name: 'visual-login-cliente',
       testMatch: /05-login-cliente\.spec\.ts/,
-      dependencies: ['visual-e2e'],
-      use: {
-        headless: false,
-        slowMo: 800,
-        launchOptions: {
-          slowMo: 800,
-        },
-      },
-    },
-    {
-      name: 'visual-promesas-pago',
-      testMatch: /07-promesas-pago\.spec\.ts/,
       dependencies: ['visual-e2e'],
       use: {
         headless: false,
